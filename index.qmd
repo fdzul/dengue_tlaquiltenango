@@ -216,25 +216,26 @@ static_bump_map(dataset = x,
 ```
 
 
-## [Situación Epidemiológica del Dengue en Temixco]{style="color:#003300;" .r-fit-text}
+## [Situación Epidemiológica del Dengue en Tlaquiletango]{style="color:#003300;" .r-fit-text}
 <hr style="height:2px;border-width:0;color:#330019;background-color:#330019">
 
 Casos Probables y Confirmados
 ```{r, out.width="100%", out.height="100%"}
 load("/Users/fdzul/Library/CloudStorage/OneDrive-Personal/proyects/geocoding_mex/2024/8.RData/denmex_2024.RData")
-densnv::mp_heatmap(locality = "Temixco",
+densnv::mp_heatmap(locality = "Tlaquiltenango",
                    cve_edo = "17",
                    geocoded_datasets = z,
-                   zoom = 13,
+                   zoom = 15,
                    status_caso = c(1, 2),
-                   week = c(1:33),
+                   week = c(1:lubridate::epiweek(Sys.Date())),
                    alpha = 0.2,
                    static = TRUE,
                    map_type = "satellite")
 ```
 
 
-## [Situación Epidemiológica del Dengue en Temixco]{style="color:#003300;" .r-fit-text}
+
+## [Situación Epidemiológica del Dengue en Tlaquiltenango]{style="color:#003300;" .r-fit-text}
 <hr style="height:2px;border-width:0;color:#330019;background-color:#330019">
 
 ```{r}
@@ -249,7 +250,7 @@ z <- z |>
 
 edo <- rgeomex::AGEM_inegi19_mx |>
     dplyr::filter(CVE_ENT == 17) |>
-    dplyr::filter(NOMGEO == "Temixco")
+    dplyr::filter(NOMGEO == "Tlaquiltenango")
 
 z <- z[edo,]
 confirmados <- z |>
@@ -279,10 +280,6 @@ mapview::mapview(probables,
                      col.regions = "#4267B2",
                      color = "white",
                      layer.name = "Positivos") +
-    mapview::mapview(serotype_1,
-                     col.regions = "#36C5F0",
-                     color = "white",
-                     layer.name = "DENV-1") +
     mapview::mapview(serotype_3,
                      col.regions = "#E01E5A",
                      color = "white",
@@ -348,5 +345,5 @@ mapview::mapview(probables,
 
 -   ***celular*** : [9999580167]()
 
--   ***slides***: [https://statuesque-malasada-d6d1f1.netlify.app/talk/dengue_temixco](https://statuesque-malasada-d6d1f1.netlify.app/talk/dengue_temixco)
+-   ***slides***: [https://meek-pegasus-3e1a77.netlify.app/#/](https://meek-pegasus-3e1a77.netlify.app/#/)
 
