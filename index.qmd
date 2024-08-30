@@ -13,7 +13,7 @@ format:
 ---
 
 <h2>
-[Situación Epidemiológica del Dengue en Temixco, Morelos ]{style="color:#003300;"}.</h2>
+[Situación Epidemiológica del Dengue en Tlaquiltenango, Morelos ]{style="color:#003300;"}.</h2>
 
 <h2>
 
