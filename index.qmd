@@ -1,24 +1,101 @@
 ---
-title: "Untitled"
-format: revealjs
-editor: visual
+format: 
+  revealjs:
+    code-block-bg: true
+    code-block-background: true
+    code-copy: true
+    chalkboard: true
+    highlight-style: github
+    slide-number: c/t
+    logo: https://github.com/fdzul/spatial_analysis_dengue_R_2024_talks/blob/main/talks/pkg_installation/logo_cenaprece.jpeg?raw=true
+    footer: "[github.com/fdzul](https://github.com/fdzul)"
+    center-title-slide: true
 ---
 
-## Quarto
+<h2>
+[Situación Epidemiológica del Dengue en Temixco, Morelos ]{style="color:#003300;"}.</h2>
 
-Quarto enables you to weave together content and executable code into a finished presentation. To learn more about Quarto presentations see <https://quarto.org/docs/presentations/>.
+<h2>
 
-## Bullets
+</h2>
 
-When you click the **Render** button a document will be generated that includes:
+<hr>
 
--   Content authored with markdown
--   Output from executable code
+<h4>
 
-## Code
+[Dr. Felipe Dzul Manzanilla]{style="color:#620002;"} 
 
-When you click the **Render** button a presentation will be generated that includes both content and the output of embedded code. You can embed code like this:
+</h3>
 
-```{r}
-1 + 1
+<h4>
+
+</h3>
+
+<h4>
+
+Dr. Santos Ramírez-Carreto
+
+</h3>
+
+<h4>
+
+Dra. Grea Moreno-Banda
+
+</h3>
+
+</h4>
+
+</h4>
+
+<h5>
+
+Fecha: 2024-08-30
+
+</h5>
+
+<br>
+
+<h4>
+
+
+![](dengue_temixco.png){.absolute top="280" left="480" width="550"}
+
+```{r setup, echo=FALSE}
+# Step 2. load the dataset ####
+path_sinave <- "/Users/fdzul/Library/CloudStorage/OneDrive-Personal/datasets/DGE/denv/2024/DENGUE2_.txt"
+
+x <- denhotspots::read_dengue_dataset(path = path_sinave,
+                                      spatial_resolution = "country",
+                                      status_caso = c(1, 2))
+
+# Step 1. load the dataset 
+source("~/Dropbox/r_developments/r_new_functions/3.Functions/static_bump_map.R")
+
 ```
+
+
+## [Ciclo de Transmisión del Dengue y Ciclo de Vida del Vector]{style="color:#003300;" .r-fit-text}
+<hr style="height:2px;border-width:0;color:#330019;background-color:#330019">
+
+::: {layout-ncol=2}
+Ciclo de Transmisión del Dengue
+![](https://media.springernature.com/full/springer-static/image/art%3A10.1038%2Fnrmicro1690/MediaObjects/41579_2007_Article_BFnrmicro1690_Fig2_HTML.jpg?as=webp)
+
+Ciclo de vida del mosquito
+![](https://www.nature.com/scitable/content/ne0000/ne0000/ne0000/ne0000/22400575/2_1.jpg)
+
+:::
+
+
+## [Como Puedo Identificar Si Tengo Dengue]{style="color:#003300;" .r-fit-text}
+<hr style="height:2px;border-width:0;color:#330019;background-color:#330019">
+
+:::: {.columns}
+::: {.column width="50%"}
+![](sintomas_ssa_yuc.png)
+:::
+::: {.column width="50%"}
+![](sintomas_ops.png)
+:::
+::::
+
