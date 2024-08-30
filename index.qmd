@@ -117,6 +117,14 @@ Ciclo de vida del mosquito
 
 ![](https://www.ecdc.europa.eu/sites/default/files/styles/is_large/public/images/20240730151155_Dengue_12_months_rate.png?itok=Ud-_9IoQ){fig-align="center"}
 
+## [Situación Epidemiológica del Dengue en las Américas]{style="color:#003300;" .r-fit-text}
+<hr style="height:2px;border-width:0;color:#330019;background-color:#330019">
+![](doble_casos.png)
+
+## [Situación Epidemiológica del Dengue en las Américas]{style="color:#003300;" .r-fit-text}
+<hr style="height:2px;border-width:0;color:#330019;background-color:#330019">
+![](alertas_dengue_ops.png)
+
 ## [Situación Epidemiológica del Dengue en México]{style="color:#003300;" .r-fit-text}
 <hr style="height:2px;border-width:0;color:#330019;background-color:#330019">
 
@@ -281,7 +289,6 @@ y1 <- den2016_2024 |>
 xy <- dplyr::bind_rows(x1, y1)
 
 # mexico y morelos ####
-plotly::ggplotly(
 ggplot2::ggplot() +
     ggplot2::geom_col(data = xy,
                       ggplot2::aes(x = year,
@@ -297,9 +304,8 @@ ggplot2::ggplot() +
                                              to = 2024,
                                              by = 1)) +
     ggplot2::ylab("Casos de Dengue") +
-    ggplot2::xlab("Años"))
+    ggplot2::xlab("Años")
 ```
-
 
 
 
