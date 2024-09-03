@@ -329,6 +329,19 @@ static_bump_map(dataset = x,
 ```
 
 
+## [Situación Epidemiológica del Dengue en Morelos por Grupo Etario]{style="color:#003300;" .r-fit-text}
+<hr style="height:2px;border-width:0;color:#330019;background-color:#330019">
+
+```{r grupo_etario, out.width="100%", out.height="100%"}
+library(magrittr)
+boldenr::pyramid_plot(x = x,
+                      by_juris = FALSE,
+                      year = "2024",
+                      state = "MORELOS",
+                      pal = "Set1")
+```
+
+
 ## [Situación Epidemiológica del Dengue en Tlaquiletango]{style="color:#003300;" .r-fit-text}
 <hr style="height:2px;border-width:0;color:#330019;background-color:#330019">
 
